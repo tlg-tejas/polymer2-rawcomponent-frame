@@ -1,0 +1,21 @@
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+<dom-module id="element-name">
+  <template>
+    <!-- Use one of these style declarations, but not both -->
+    <!-- Use this if you don’t want to include a shared style -->
+    <style></style>
+    <!-- Use this if you want to include a shared style -->
+    <style include="some-style-module-name"></style>
+  </template>
+  <script>
+    class MyElement extends Polymer.Element {
+      static get is() { return 'element-name'; }
+      // All of these are optional. Only keep the ones you need.
+      static get properties() { ... }
+      static get observers() { ... }
+    }
+
+    // Associate the new class with an element name
+    customElements.define(MyElement.is, MyElement);
+  </script>
+</dom-module>
